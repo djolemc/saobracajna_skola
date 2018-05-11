@@ -2,7 +2,7 @@
        <nav class="navbar navbar-default navbar-fixed-bottom footer" role="navigation">
           
             
-            <h1>Oво је фоотер на ћирилици</h1>
+           <small>Copyright &copy; PHP Rudari 2018 by Voja Macola</small>
            
         </nav>
 
