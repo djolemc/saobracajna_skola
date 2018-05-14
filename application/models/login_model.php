@@ -34,13 +34,18 @@ class Login_model extends CI_Model {
 
         if ($user!=NULL) {
             //Ako imamo korisnika, pravimo podatke za sesiju
-           // $row = $query->row();
-            /*$data = array(
-                'userid' => $row->id,
-                'username' => $row->username,
+            $row = $query->row();
+            $data = array(
+                'idkorisnik' => $row->idkorisnik,
+                'ime'=>$row->$row->ime,
+                'prezime'=>$row->prezime,
+                'korisnicko_ime' => $row->korisnicko_ime,
+                'lozinka'=>$row->lozinka,
+                'tip'=>$row->guid,
+                'email'=>$row->email,
                 'validated' => true
             );
-            $this->session->set_userdata($data);*/
+            $this->session->set_userdata($data);
             return true;
         } else
 //ako validacija nije uspela, vrati false
@@ -49,17 +54,3 @@ class Login_model extends CI_Model {
 
 }
 
-/*public function ispravanpassword($password){
-        $this->db->where('username',$this->username);
-        $this->db->where('password',$password);
-        $result=$this->db->get('autor');
-        $autor=$result->row_array();
-       
-        if($autor!=NULL){
-            $this->ime=$autor['ime'];
-            $this->prezime=$autor['prezime'];
-            $this->id=$autor['id'];
-            return TRUE;
-        }
-        else
-            return false;*/

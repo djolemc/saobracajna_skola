@@ -10,7 +10,7 @@ class admin extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-       //$this->check_isvalidated();
+      $this->check_isvalidated();
         // $this->load->helper('url');
     }
 
@@ -18,11 +18,11 @@ class admin extends CI_Controller {
         $this->loadView("index.php");
     }
     
-  /*  private function check_isvalidated(){
+   private function check_isvalidated(){
         if (!$this->session->userdata('validated')) {
-            redirect ('index');
+             redirect (site_url('/admin/index'));
         }
-    }*/
+    }
 
 
         private function loadView($glavniDeo) {
@@ -31,6 +31,12 @@ class admin extends CI_Controller {
         $this->load->view($glavniDeo);
         $this->load->view('sabloni/footer');
     }
+
+    public function do_logout(){
+        $this->session->sess_destroy();
+        redirect (site_url('/login/index'));
+    }
+
 
 public function ucenik() {
     $this->loadView("ucenik.php");

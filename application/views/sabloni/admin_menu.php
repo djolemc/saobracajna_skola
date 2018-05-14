@@ -35,7 +35,7 @@
                 </ul>
                 <ul  class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link mr-sm-2"  href="#">Izloguj se</a>
+                    <a class="nav-link mr-sm-2"  href="<?php echo site_url("admin/do_logout/")?>">Izloguj se</a>
                 </li>
                 </ul>
 
