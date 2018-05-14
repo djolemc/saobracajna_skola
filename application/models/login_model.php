@@ -22,12 +22,12 @@ class Login_model extends CI_Model {
 
 //Priprema upit:
 
-        $this->db->where('user_name', $username);
-        $this->db->where('user_password', $password);
+        $this->db->where('korisnicko_ime', $username);
+        $this->db->where('lozinka', $password);
 
 //Pokrece upit
 
-        $query = $this->db->get('user_login');
+        $query = $this->db->get('korisnik');
         $user=$query->row_array();
 
 
