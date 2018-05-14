@@ -9,7 +9,8 @@ class login extends CI_Controller {
        
             }
     
-    public function index() {
+    public function index($msg= NULL) {
+        $data['msg']=$msg;
         $this->load->view('sabloni/header');
         $this->load->view('logovanje');
         $this->load->view('sabloni/footer');
@@ -30,7 +31,7 @@ class login extends CI_Controller {
         }
         
     }
-    
+    aaa();
 
    
     
