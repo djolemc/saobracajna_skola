@@ -17,8 +17,7 @@
                     <option value="<?php ?>">Предмет</option>      
                 </select><br>
                 <input type="submit" name="dodaj" value="Додај"><br>
-                <a href=" ">Врати се назад</a>
-                <a href="dokumentacija.php">Документација<a/>
+                <a href="<?php echo site_url("admin/ucenik")?>">Врати се назад</a>
                 <input type="submit" name="sacuvaj" value="Сачувај">
                 
             </form>

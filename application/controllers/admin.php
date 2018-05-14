@@ -41,6 +41,9 @@ public function statistika() {
 public function priznati_ispiti() {
     $this->loadView("priznati_ispiti.php");
 }
+public function dokumentacija() {
+    $this->loadView("dokumentacija.php");
+}
 }
 
 ?>
