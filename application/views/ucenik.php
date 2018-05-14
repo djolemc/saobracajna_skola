@@ -48,8 +48,8 @@
                             <input type="radio" name="tip_ucenika" value="up">Упис у први разред школе<br>
                             <input type="radio" name="tip_ucenika" value="un">Упис у неки разред школе<br>
                             <input type="radio" name="tip_ucenika" value="s">Специјализација<br>
-                <a href="dokumentacija.php">Документација</a>
-                <a href="priznati_ispiti.php">Признати испити</a>
+                <a href="<?php echo site_url("admin/dokumentacija")?>">Документација</a>
+                <a href="<?php echo site_url("admin/priznati_ispiti")?>">Признати испити</a>
                 <input type="submit" name="Sacuvaj" value="Сачувај">
                 
                 

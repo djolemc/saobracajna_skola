@@ -39,6 +39,8 @@
                     <input type="submit" name="izmeni" value="Измени"><br>
                     <input type="submit" name="obrisi" value="Обриши"><br>
                     <input type="submit" name="snimi" value="Сними">
+                    <a href="<?php echo site_url("admin/ucenik")?>">Врати се назад</a>
+                    <a href="<?php echo site_url("admin/prijava_ispita")?>">Пријава испита</a>
                 </div>
             </form>
         </div>
