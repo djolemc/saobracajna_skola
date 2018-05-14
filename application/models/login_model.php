@@ -37,7 +37,7 @@ class Login_model extends CI_Model {
             $row = $query->row();
             $data = array(
                 'idkorisnik' => $row->idkorisnik,
-                'ime'=>$row->$row->ime,
+                'ime'=>$row->ime,
                 'prezime'=>$row->prezime,
                 'korisnicko_ime' => $row->korisnicko_ime,
                 'lozinka'=>$row->lozinka,
