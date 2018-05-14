@@ -31,7 +31,6 @@ class login extends CI_Controller {
         }
         
     }
-    aaa();
 
    
     
