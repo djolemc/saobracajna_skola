@@ -37,6 +37,10 @@ public function raspored() {
 public function statistika() {
     $this->loadView("statistika.php");
 }
+
+public function priznati_ispiti() {
+    $this->loadView("priznati_ispiti.php");
+}
 }
 
 ?>

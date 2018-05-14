@@ -1,19 +1,19 @@
 
     <body>
         <div>
-            <form name="registracija">
+            <form name="registracija" method="POST" action=" ">
                 <input type="text" name="pretraga" placeholder="Претрага">
-                <input type="submit" name="Unesi" placeholder="Унеси">
-                <input type="submit" name="Izmeni" placeholder="Измени"><br>
+                <input type="submit" name="Unesi" value="Унеси">
+                <input type="submit" name="Izmeni" value="Измени"><br>
                 <input type="text" name="delovodni_broj" placeholder="Деловодни број"><br>
                 <input type="text" name="maticni_broj" placeholder="Матични број"><br>
-                <input  type="text" name="ime" value="Унеси име"><br>
-                <input  type="text" name="prezime" value="Унеси презиме"><br>
-                <input  type="text" name="ime_roditelja" value="Унеси име родитеља"><br>
-                <input  type="date" name="datum_rodjenja" value=""><br>
-                Pol:<input type="radio" name="pol" value="muski" checked>Мушки
-                    <input type="radio" name="pol" value="zenski">Женски<br>
-                <input  type="text" name="mesto_rodjenja" value="Унеси место рођењa"><br>
+                <input  type="text" name="ime" placeholder="Унеси име"><br>
+                <input  type="text" name="prezime" placeholder="Унеси презиме"><br>
+                <input  type="text" name="ime_roditelja" placeholder="Унеси име родитеља"><br>
+                <input  type="date" name="datum_rodjenja" placeholder=""><br>
+                Pol:<input type="radio" name="pol" placeholder="muski" checked>Мушки
+                    <input type="radio" name="pol" placeholder="zenski">Женски<br>
+                <input  type="text" name="mesto_rodjenja" placeholder="Унеси место рођењa"><br>
                 <select name="drzava">
                     <option value="drzava">Изабери државу</option>
                     <option value="<?php ?>">Изабери државу</option>
@@ -26,10 +26,10 @@
                     <option value="opstina">Изабери општину</option>
                     <option value="<?php ?>">Изабери општину</option>
                 </select><br>
-                <input  type="text" name="adresa" value="Унеси адресу"><br>
-                <input  type="text" name="jmbg" value="Унеси јмбг"><br>
-                <input  type="tel" name="telefon" value="Унеси телефон"><br>
-                <input  type="email" name="email" value="Унеси e-mail"><br>
+                <input  type="text" name="adresa" placeholder="Унеси адресу"><br>
+                <input  type="text" name="jmbg" placeholder="Унеси јмбг"><br>
+                <input  type="tel" name="telefon" placeholder="Унеси телефон"><br>
+                <input  type="email" name="email" placeholder="Унеси e-mail"><br>
                 <select name="upis">
                     <option value="upis">Година уписа</option>
                     <option value="<?php ?>">Година уписа</option>      
@@ -48,8 +48,8 @@
                             <input type="radio" name="tip_ucenika" value="up">Упис у први разред школе<br>
                             <input type="radio" name="tip_ucenika" value="un">Упис у неки разред школе<br>
                             <input type="radio" name="tip_ucenika" value="s">Специјализација<br>
-                <input type="submit" name="Dokumentacija" value="Документација">
-                <input type="submit" name="Priznati_ispiti" value="Признати испити">
+                <a href="dokumentacija.php">Документација</a>
+                <a href="priznati_ispiti.php">Признати испити</a>
                 <input type="submit" name="Sacuvaj" value="Сачувај">
                 
                 
