@@ -59,6 +59,16 @@ public function priznati_ispiti() {
 public function dokumentacija() {
     $this->loadView("dokumentacija.php");
 }
+public function unesi_ucenika(){
+    $delovodni_broj=$this->input->post("delovodni_broj");
+    $jedinstveni_broj=$this->input->post("jedinstveni_broj");
+    $ime=$this->input->post("ime");
+    $prezime=$this->input->post("prezime");
+    $ime_roditelja=$this->input->post("ime_roditelja");
+    $datum=$this->input->post("datum");
+    
+    $id=$this->model_admin->unesi_ucenika();
+}
 }
 
 ?>
