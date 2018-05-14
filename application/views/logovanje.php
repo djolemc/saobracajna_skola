@@ -10,9 +10,10 @@
     </div>
     <div class="col-md-8 mx-auto ">
         
-        <form action="<?php echo site_url('admin/index')?>" method="POST" name='process'>
+        <form action="<?php echo site_url('login/process')?>" method="POST" name='process'>
             <h2>User Login</h2>
             <br>
+            <?php if (!is_null($msg)) echo $msg;?>
             <label for='username'>Username</label>
             <input type="text" name='username' id='username'size="25"><br>
             
@@ -23,8 +24,8 @@
         
         </form>
         
-        
-        
+     
+       
     </div>
     <div class="col-md-2">
 

@@ -12,7 +12,7 @@ class login extends CI_Controller {
     public function index($msg= NULL) {
         $data['msg']=$msg;
         $this->load->view('sabloni/header');
-        $this->load->view('logovanje');
+        $this->load->view('logovanje',$data);
         $this->load->view('sabloni/footer');
     }
     
@@ -21,17 +21,22 @@ class login extends CI_Controller {
         $this->load->model('login_model');
         $result= $this->login_model->validate();
         
-        if (!result) {
+        if (!$result) {
             //ako nije ulogovan, vrati na indeks
-            $this->index();
+            $msg='<font color=red>Invalid username and/or password.</font><br>';
+            $this->index($msg);
         } 
         else {
             //uloguj korisnika
-            redirect ('home');
+         //  redirect(base_url('admin/index'));
+           //$this->load->helper('url');
+
+            redirect (site_url('/admin/index'));
+            
         }
         
     }
-    aaa();
+   
 
    
     
