@@ -30,8 +30,8 @@ class login extends CI_Controller {
             //uloguj korisnika
          //  redirect(base_url('admin/index'));
            //$this->load->helper('url');
-            $name= $this->session->userdata('ime');
-            redirect (site_url('/admin/index'),$name);
+            //$name= $this->session->userdata('ime');
+            redirect (site_url('/admin/index'));
             
         }
         

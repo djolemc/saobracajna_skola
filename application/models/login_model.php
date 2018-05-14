@@ -14,10 +14,10 @@ class Login_model extends CI_Model {
     }
 
     public function validate() {
-        //   $username= $this->security->xss_clean($this->input->post('username'));
-        //   $password= $this->security->xss_clean($this->input->post('password'));
-        $username = $this->input->post('username');
-        $password = $this->input->post('password');
+           $username= $this->security->xss_clean($this->input->post('username'));
+           $password= $this->security->xss_clean($this->input->post('password'));
+      //  $username = $this->input->post('username');
+       // $password = $this->input->post('password');
 
 
 //Priprema upit:

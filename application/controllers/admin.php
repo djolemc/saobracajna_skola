@@ -59,6 +59,10 @@ public function statistika() {
     $this->loadView("statistika.php");
 }
 
+public function administracija() {
+    $this->loadView("admin/administracija.php");
+}
+
 public function priznati_ispiti() {
     $this->loadView("priznati_ispiti.php");
 }

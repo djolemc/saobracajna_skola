@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url("admin/statistika/")?>">Statistika</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo site_url("admin/administracija/")?>">Administracija</a>
+                    </li>
                 </ul>
                 <ul  class="navbar-nav ">
                 <li class="nav-item">
