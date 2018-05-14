@@ -41,7 +41,4 @@ class login extends CI_Controller {
 
 
 
-
-
-
 //https://www.codeproject.com/Articles/476944/Create-user-login-with-Codeigniter
