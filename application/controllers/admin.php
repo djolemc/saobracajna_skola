@@ -31,7 +31,8 @@ public function index_admin() {
 
 
        public function loadView($glavniDeo) {
-         $tip=$this->session->userdata('tip');
+        
+           $tip=$this->session->userdata('tip');
          
          if ($tip==0)
          $menu='admin/admin_menu';
