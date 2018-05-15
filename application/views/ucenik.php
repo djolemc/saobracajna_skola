@@ -15,24 +15,24 @@
             <div class="col-md-6">
                 
                 
-                <input type="text" name="delovodni_broj" placeholder="Деловодни број"><br>
-                <input type="text" name="jedinstveni_broj_ucenik" placeholder="Јединствени број"><br>
+                <input type="text" name="delovodni" placeholder="Деловодни број"><br>
+                <input type="text" name="jedinstveni_broj" placeholder="Јединствени број"><br>
                 <input  type="text" name="ime" placeholder="Унеси име"><br>
                 <input  type="text" name="prezime" placeholder="Унеси презиме"><br>
-                <input  type="text" name="ime_otac" placeholder="Унеси име оца"><br>
-                <input  type="text" name="ime_majka" placeholder="Унеси име мајке"><br>
-                <input  type="text" name="prezime_majka" placeholder="Девојачко презиме мајке"><br>
-                <input  type="date" name="datum_rodjenje" placeholder=""><br>
+                <input  type="text" name="ime_oca" placeholder="Унеси име оца"><br>
+                <input  type="text" name="ime_majke" placeholder="Унеси име мајке"><br>
+                <input  type="text" name="prezime_majke" placeholder="Девојачко презиме мајке"><br>
+                <input  type="date" name="datum" placeholder=""><br>
                 Pol:<input type="radio" name="pol" value="1" checked>Мушки
                 <input type="radio" name="pol" value="2">Женски<br>
-                <input type="text" name="drzava_rodjenje" placeholder="Унеси државу"><br>
-                <input type="text" name="mesto_rodjenje" placeholder="Унеси место рођења"><br>
-                <input type="text" name="optina_rodjenje" placeholder="Унеси општину рођења"><br>
-                <input  type="text" name="adresa_stanovanje" placeholder="Унеси адресу"><br>
+                <input type="text" name="drzava_rodj" placeholder="Унеси државу"><br>
+                <input type="text" name="mesto_rodj" placeholder="Унеси место рођења"><br>
+                <input type="text" name="opstina_rodj" placeholder="Унеси општину рођења"><br>
+                <input  type="text" name="adresa_stan" placeholder="Унеси адресу"><br>
                 <input  type="text" name="jmbg" placeholder="Унеси ЈМБГ"><br>
-                <input  type="tel" name="broj_telefon" placeholder="Унеси телефон"><br>
-                <input  type="tel" name="telefon_mobilni" placeholder="Унеси мобилни телефон"><br>
-                <input  type="email" name="e-mail" placeholder="Унеси e-mail"><br>
+                <input  type="tel" name="broj_tel" placeholder="Унеси телефон"><br>
+                <input  type="tel" name="mobilni" placeholder="Унеси мобилни телефон"><br>
+                <input  type="email" name="email" placeholder="Унеси e-mail"><br>
                 
                 
             </div>

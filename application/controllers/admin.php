@@ -68,9 +68,11 @@ class admin extends CI_Controller {
         $this->loadView("prijava_ispita.php");
     }
 
+
     public function raspored() {
         $this->loadView("raspored.php");
     }
+
 
     public function statistika() {
         $this->loadView("statistika.php");
@@ -93,6 +95,7 @@ class admin extends CI_Controller {
     public function unesi_ucenika() {
         $this->load->model('model_admin');
         $this->model_admin->unesi_ucenika();
+        redirect (site_url('admin/ucenik'));
     }
 
     public function unesi_profesora() {
