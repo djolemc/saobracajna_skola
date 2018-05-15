@@ -50,6 +50,8 @@ public function unesi_ucenika(){
     $this->db->set("broj_telefon", $broj_tel);
     $this->db->set("telefon_mobilni", $mobilni);
     $this->db->set("e-mail", $email);
+    $this->db->set("tip_ucenik_idtip_ucenik",1);
+    $this->db->set("godina_obrazovanja_idgodina_obrazovanja",1);
     
     $this->db->insert("ucenik");
     // $id=$this->db->insert_id();

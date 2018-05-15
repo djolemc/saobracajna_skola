@@ -27,7 +27,7 @@
                 <input type="radio" name="pol" value="2">Женски<br>
                 <input type="text" name="drzava_rodj" placeholder="Унеси државу"><br>
                 <input type="text" name="mesto_rodj" placeholder="Унеси место рођења"><br>
-                <input type="text" name="optina_rodj" placeholder="Унеси општину рођења"><br>
+                <input type="text" name="opstina_rodj" placeholder="Унеси општину рођења"><br>
                 <input  type="text" name="adresa_stan" placeholder="Унеси адресу"><br>
                 <input  type="text" name="jmbg" placeholder="Унеси ЈМБГ"><br>
                 <input  type="tel" name="broj_tel" placeholder="Унеси телефон"><br>
