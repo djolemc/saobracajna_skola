@@ -1,7 +1,7 @@
 
 
 <div class="row">
-    
+
 
 
     <div class="col-md-6 ">
@@ -15,7 +15,7 @@
                 <input type="text" name="prezime" placeholder="Unesite prezime"><br>
                 Korisnicko ime:<br>
                 <input type="text" name="kor_ime" placeholder="Kor. ime:"><br>
-                 Lozinka:<br>
+                Lozinka:<br>
                 <input type="password" name="lozinka" placeholder="Kor. ime:"><br>
                 Ponovite lozinku:<br>
                 <input type="password" name="lozinka2" placeholder="Lozinka:"><br>
@@ -26,15 +26,23 @@
             </fieldset>
         </form>
         <?php
-                    $poruka = $this->session->userdata('poruka');
-                  echo  $poruka;
-                    ?>
+        $poruka = $this->session->userdata('poruka');
+        echo $poruka;
+        ?>
 
     </div>
 
 
 
-    <div class="col-md-6"></div>
+    <div class="col-md-6">
+
+        <?php
+        
+                foreach ($data->result as $row)
+                    echo $row->idkorisnik;
+        ?>
+
+    </div>
 
 
 </div>

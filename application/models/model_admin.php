@@ -84,6 +84,11 @@ public function unos_operatera() {
     $this->db->insert("korisnik");    
 }
 
+public function dohvati_operatera(){
+       /* $this->db->where("guid","1");*/
+       $query = $this->db->get('korisnik');
+       return $query;
+    }
 
 
 }

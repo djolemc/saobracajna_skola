@@ -13,6 +13,7 @@ class admin extends CI_Controller {
         parent::__construct();
         $this->check_isvalidated();
         // $this->load->helper('url');
+        $this->load->model('model_admin');
     }
 
     public function index_admin() {
@@ -29,7 +30,7 @@ class admin extends CI_Controller {
         }
     }
 
-    public function loadView($glavniDeo) {
+    public function loadView($glavniDeo,$data="aaa") {
 
         $tip = $this->session->userdata('tip');
 
@@ -42,7 +43,7 @@ class admin extends CI_Controller {
 
         $this->load->view('sabloni/header');
         $this->load->view($menu);
-        $this->load->view($glavniDeo);
+        $this->load->view($glavniDeo,$data);
         $this->load->view('sabloni/footer');
     }
 
@@ -76,10 +77,12 @@ class admin extends CI_Controller {
     }
 
     public function administracija() {
-        $this->loadView("admin/administracija.php");
+       $data['user']=$this->model_admin->dohvati_operatera();
+       $this->loadView("admin/administracija.php",$data);
     }
 
     public function priznati_ispiti() {
+        
         $this->loadView("priznati_ispiti.php");
     }
 
@@ -100,15 +103,13 @@ class admin extends CI_Controller {
     public function unos_operatera() {
         $this->load->model('model_admin');
         $this->model_admin->unos_operatera();
-        $data=array (
-            'poruka'=>"Operater je uspešno dodat u bazu!");
+        $data = array(
+            'poruka' => "Operater je uspešno dodat u bazu!");
         $this->session->set_userdata($data);
-        redirect (site_url('/admin/administracija'));
-        
-                
+        redirect(site_url('/admin/administracija'));
     }
-    
-    
+
+   
 }
 
 ?>
