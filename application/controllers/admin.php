@@ -72,16 +72,13 @@ public function dokumentacija() {
 public function unesi_ucenika(){
     $this->load->model('model_admin');
     $this->model_admin->unesi_ucenika();        
-            
-           
-    /*$delovodni_broj=$this->input->post("delovodni_broj");
-    $jedinstveni_broj=$this->input->post("jedinstveni_broj");*/
-    
-  /*  $prezime=$this->input->post("prezime");
-    $ime_roditelja=$this->input->post("ime_roditelja");
-    $datum=$this->input->post("datum");*/
-    
  
+}
+public function unesi_profesora(){
+    $this->load->model('model_admin');
+    $this->model_admin->unesi_profesora();
+    
+
 }
 }
 
