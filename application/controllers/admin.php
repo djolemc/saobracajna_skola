@@ -30,7 +30,7 @@ class admin extends CI_Controller {
         }
     }
 
-    public function loadView($glavniDeo,$data="aaa") {
+    public function loadView($glavniDeo, $korisnici=NULL) {
 
         $tip = $this->session->userdata('tip');
 
@@ -43,7 +43,7 @@ class admin extends CI_Controller {
 
         $this->load->view('sabloni/header');
         $this->load->view($menu);
-        $this->load->view($glavniDeo,$data);
+        $this->load->view($glavniDeo, $korisnici);
         $this->load->view('sabloni/footer');
     }
 
@@ -68,23 +68,22 @@ class admin extends CI_Controller {
         $this->loadView("prijava_ispita.php");
     }
 
-
     public function raspored() {
         $this->loadView("raspored.php");
     }
-
 
     public function statistika() {
         $this->loadView("statistika.php");
     }
 
     public function administracija() {
-       $data['user']=$this->model_admin->dohvati_operatera();
-       $this->loadView("admin/administracija.php",$data);
+        $result = $this->model_admin->dohvati_operatera();
+        $data['korisnici'] = $result;
+        $this->loadView("admin/administracija.php", $data);
     }
 
     public function priznati_ispiti() {
-        
+
         $this->loadView("priznati_ispiti.php");
     }
 
@@ -95,7 +94,7 @@ class admin extends CI_Controller {
     public function unesi_ucenika() {
         $this->load->model('model_admin');
         $this->model_admin->unesi_ucenika();
-        redirect (site_url('admin/ucenik'));
+        redirect(site_url('admin/ucenik'));
     }
 
     public function unesi_profesora() {
@@ -104,15 +103,19 @@ class admin extends CI_Controller {
     }
 
     public function unos_operatera() {
-        $this->load->model('model_admin');
+      //  $this->load->model('model_admin');
         $this->model_admin->unos_operatera();
         $data = array(
             'poruka' => "Operater je uspešno dodat u bazu!");
         $this->session->set_userdata($data);
         redirect(site_url('/admin/administracija'));
     }
+    
+    public function obrisi_operatera() {
+        
+    }
+    
 
-   
 }
 
 ?>

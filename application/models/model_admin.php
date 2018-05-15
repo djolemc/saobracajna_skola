@@ -100,9 +100,10 @@ public function unos_operatera() {
 }
 
 public function dohvati_operatera(){
-       /* $this->db->where("guid","1");*/
-       $query = $this->db->get('korisnik');
-       return $query;
+      
+      $query=$this->db->query('select * from korisnik where guid="1"');
+      $result=$query->result_array();
+      return $result;
     }
 
 

@@ -37,10 +37,18 @@
     <div class="col-md-6">
 
         <?php
+                //$query=$this->db->query("SELECT * FROM srednja_skola.korisnik where guid='1';");
+                       
+                
+                echo "Ime Prezime Email <br>";
+                        foreach ($korisnici as $row) {
+                            echo $row['ime']."&nbsp";
+                            echo $row['prezime']."&nbsp";
+                            echo $row ['email']."&nbsp";?>
+                            <button><a href=<?php echo site_url("admin/obrisi_operatera") ?>>Obriši</a></button><br>
+                        
         
-                foreach ($data->result as $row)
-                    echo $row->idkorisnik;
-        ?>
+                        <?php } ?>                
 
     </div>
 
