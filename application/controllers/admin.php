@@ -85,9 +85,12 @@ public function dokumentacija() {
 }
 public function unesi_ucenika(){
     $this->load->model('model_admin');
-    $this->model_admin->unesi_ucenika();        
+    $this->model_admin->unesi_ucenika();   
  
-}
+    redirect("admin/ucenik");
+        }
+ 
+
 public function unesi_profesora(){
     $this->load->model('model_admin');
     $this->model_admin->unesi_profesora();

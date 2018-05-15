@@ -18,25 +18,38 @@ class model_admin extends CI_Model{
     }
 public function unesi_ucenika(){
     $ime=$this->input->post("ime");
-    $jedinstveni_broj_ucenik=$this->input->post("jedinstveni_broj_ucenik");
-    $delovodni_broj=$this->input->post("delovodni_broj");
+    $jedinstveni_broj=$this->input->post("jedinstveni_broj");
+    $delovodni=$this->input->post("delovodni");
     $prezime=$this->input->post("prezime");
-    $ime_otac=$this->input->post("ime_otac");
-    $ime_majka=$this->input->post("ime_majka");
-    $prezime_majka=$this->input->post("prezime_majka");
-    $datum=$this->input->post("datum_rodjenje");
+    $ime_oca=$this->input->post("ime_oca");
+    $ime_majke=$this->input->post("ime_majke");
+    $prezime_majke=$this->input->post("prezime_majke");
+    $datum=$this->input->post("datum");
     $jmbg=$this->input->post("jmbg");
+    $mesto_rodj=$this->input->post("mesto_rodj");
+    $opstina_rodj=$this->input->post("opstina_rodj");
+    $drzava_rodj=$this->input->post("drzava_rodj");
+    $adresa_stan=$this->input->post("adresa_stan");
+    $broj_tel=$this->input->post("broj_tel");
+    $mobilni=$this->input->post("mobilni");
+    $email=$this->input->post("email");
      
     $this->db->set("ime", $ime);
-    $this->db->set("jedinstveni_broj_ucenik", $jedinstveni_broj_ucenik);
-    $this->db->set("delovodni_broj", $delovodni_broj);
+    $this->db->set("jedinstveni_broj_ucenik", $jedinstveni_broj);
+    $this->db->set("delovodni_broj", $delovodni);
     $this->db->set("prezime", $prezime);
-    $this->db->set("ime_otac", $ime_otac);
-    $this->db->set("ime_majka", $ime_majka);
-    $this->db->set("prezime_majka", $prezime_majka);
+    $this->db->set("ime_otac", $ime_oca);
+    $this->db->set("ime_majka", $ime_majke);
+    $this->db->set("prezime_majka", $prezime_majke);
     $this->db->set("datum_rodjenje", mdate("%Y-%m-%d"));
     $this->db->set("jmbg", $jmbg);
-    
+    $this->db->set("mesto_rodjenje", $mesto_rodj);
+    $this->db->set("opstina_rodjenje", $opstina_rodj);
+    $this->db->set("drzava_rodjenje", $drzava_rodj);
+    $this->db->set("adresa_stanovanje", $adresa_stan);
+    $this->db->set("broj_telefon", $broj_tel);
+    $this->db->set("telefon_mobilni", $mobilni);
+    $this->db->set("e-mail", $email);
     
     $this->db->insert("ucenik");
     // $id=$this->db->insert_id();
