@@ -17,14 +17,16 @@ class model_admin extends CI_Model{
         $this->load->database();
     }
 public function unesi_ucenika(){
-     $this->db->set("delovodni_broj", $delovodni_broj);
-     $this->db->set("jedinstveni_broj", $jedinstveni_broj);
+    $ime=$this->input->post("ime");
+    $jedinstveni_broj=$this->input->post("jedinstveni_broj");
+    // $this->db->set("delovodni_broj", $delovodni_broj);
+     $this->db->set("jedinstveni_broj_ucenik", $jedinstveni_broj);
      $this->db->set("ime", $ime);
-     $this->db->set("prezime", $prezime);
+    /* $this->db->set("prezime", $prezime);
      $this->db->set("ime_roditelja", $ime_otac);
-     $this->db->set("datum", mdate("%Y-%m-%d"));
+     $this->db->set("datum", mdate("%Y-%m-%d"));*/
      $this->db->insert("ucenik");
-     $id=$this->db->insert_id();
+    // $id=$this->db->insert_id();
       //return $id;
     }
 }
