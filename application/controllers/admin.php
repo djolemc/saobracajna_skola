@@ -13,8 +13,13 @@ class admin extends CI_Controller {
       $this->check_isvalidated();
         // $this->load->helper('url');
     }
+  
 
-    public function index() {
+public function index_admin() {
+        $this->loadView("index.php");
+        }
+    
+    public function index_korisnik() {
         $this->loadView("index.php");
     }
     
@@ -25,9 +30,17 @@ class admin extends CI_Controller {
     }
 
 
-        private function loadView($glavniDeo) {
+       public function loadView($glavniDeo) {
+         $tip=$this->session->userdata('tip');
+         
+         if ($tip==0)
+         $menu='admin/admin_menu';
+                 else
+             if ($tip==1) $menu='korisnik/korisnik_menu';
+           
+           
         $this->load->view('sabloni/header');
-        $this->load->view('sabloni/admin_menu');
+        $this->load->view($menu);
         $this->load->view($glavniDeo);
         $this->load->view('sabloni/footer');
     }

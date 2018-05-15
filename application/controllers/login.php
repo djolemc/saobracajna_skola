@@ -20,6 +20,7 @@ class login extends CI_Controller {
         //load model
         $this->load->model('login_model');
         $result= $this->login_model->validate();
+        $tip=$this->session->userdata('tip');
         
         if (!$result) {
             //ako nije ulogovan, vrati na indeks
@@ -27,17 +28,24 @@ class login extends CI_Controller {
             $this->index($msg);
         } 
         else {
-            //uloguj korisnika
-         //  redirect(base_url('admin/index'));
-           //$this->load->helper('url');
-            //$name= $this->session->userdata('ime');
-            redirect (site_url('/admin/index'));
+            if ($tip==0) {
+           
+                //ako je ulogovan admin
+            redirect (site_url('/admin/index_admin'));
             
         }
+        else {
+            if ($tip==1) {
+                
+                //ako je ulogovan operater
+               redirect (site_url('/admin/index_korisnik')); 
+            }
+        } 
+            
         
     }
     
-    
+    }
    
     
 }
@@ -45,3 +53,6 @@ class login extends CI_Controller {
 
 
 //https://www.codeproject.com/Articles/476944/Create-user-login-with-Codeigniter
+
+
+?>
