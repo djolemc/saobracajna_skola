@@ -78,4 +78,25 @@ public function unesi_profesora(){
     
     $this->db->insert("profesor");    
 }  
+
+public function unos_operatera() {
+    $ime= $this->input->post("ime");
+    $prezime= $this->input->post("prezime");
+    $username= $this->input->post("kor_ime");
+    $password= $this->input->post("lozinka");
+    $email= $this->input->post("email");
+    $tip=$this->input->post("tip");
+  
+    $this->db->set("ime",$ime);
+    $this->db->set("prezime",$prezime);
+    $this->db->set("korisnicko_ime",$username);
+    $this->db->set("lozinka",$password);
+    $this->db->set("email",$email);
+    $this->db->set("guid",$tip);
+    
+    $this->db->insert("korisnik");    
+}
+
+
+
 }
