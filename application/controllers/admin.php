@@ -31,7 +31,7 @@ class admin extends CI_Controller {
         }
     }
 
-    public function loadView($glavniDeo, $korisnici=NULL) {
+    public function loadView($glavniDeo, $korisnici = NULL) {
 
         $tip = $this->session->userdata('tip');
 
@@ -101,30 +101,69 @@ class admin extends CI_Controller {
     }
 
     public function unesi_ucenika() {
+
+
+
+        $ime = $this->input->post("ime");
+        $jedinstveni_broj = $this->input->post("jedinstveni_broj");
+        $delovodni = $this->input->post("delovodni");
+        $prezime = $this->input->post("prezime");
+        $ime_oca = $this->input->post("ime_oca");
+        $ime_majke = $this->input->post("ime_majke");
+        $prezime_majke = $this->input->post("prezime_majke");
+        $datum = $this->input->post("datum");
+        $jmbg = $this->input->post("jmbg");
+        $mesto_rodj = $this->input->post("mesto_rodj");
+        $opstina_rodj = $this->input->post("opstina_rodj");
+        $drzava_rodj = $this->input->post("drzava_rodj");
+        $adresa_stan = $this->input->post("adresa_stan");
+        $broj_tel = $this->input->post("broj_tel");
+        $mobilni = $this->input->post("mobilni");
+        $email = $this->input->post("email");
+
         $this->load->model('model_admin');
-        $this->model_admin->unesi_ucenika();
+        $this->model_admin->unesi_ucenika($ime, $jedinstveni_broj, $delovodni, $prezime, $ime_oca, $ime_majke, $prezime_majke, $datum, $jmbg, $mesto_rodj, $opstina_rodj, $drzava_rodj, $adresa_stan, $broj_tel, $mobilni, $email);
         redirect(site_url('admin/ucenik'));
     }
 
     public function unesi_profesora() {
-        $this->load->model('model_admin');
-        $this->model_admin->unesi_profesora();
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        
+        $this->form_validation->set_rules('ime', 'Ime_profesora', 'required');
+        
+        if($this->form_validation->run()=== FALSE){
+            $this->loadView("profesor.php");
+        }else{
+            $this->model_admin->unesi_profesora();
+            $data = array(
+            'poruka' => "Profesor je uspešno dodat u bazu!");
+            $this->session->set_userdata($data);
+            redirect(site_url('/admin/profesor'));
+        }
+        
+        
     }
 
     public function unos_operatera() {
-      //  $this->load->model('model_admin');
+        //  $this->load->model('model_admin');
         $this->model_admin->unos_operatera();
         $data = array(
             'poruka' => "Operater je uspešno dodat u bazu!");
         $this->session->set_userdata($data);
         redirect(site_url('/admin/administracija'));
     }
+<<<<<<< HEAD
+
+    public function obrisi_operatera() {
+        
+=======
     
     public function obrisi_operatera($idkorisnik) {
         $this->model_admin->obrisi_operatera($idkorisnik);
         redirect(site_url('/admin/administracija'));
+>>>>>>> e4650e1dff6ce783af202ab24fddb2b997c4ae17
     }
-    
 
 }
 
