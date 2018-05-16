@@ -112,5 +112,10 @@ public function dohvati_operatera(){
       return $result;
     }
 
-
+public function obrisi_operatera($idkorisnik) {
+    $query= $this->db->query("delete  from korisnik where idkorisnik='$idkorisnik'");
+    //to do Ime i prezime korisnika
+}
+    
+    
 }
