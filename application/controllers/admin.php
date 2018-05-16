@@ -153,16 +153,15 @@ class admin extends CI_Controller {
         $this->session->set_userdata($data);
         redirect(site_url('/admin/administracija'));
     }
-<<<<<<< HEAD
 
-    public function obrisi_operatera() {
-        
-=======
+
+         
+
     
     public function obrisi_operatera($idkorisnik) {
         $this->model_admin->obrisi_operatera($idkorisnik);
         redirect(site_url('/admin/administracija'));
->>>>>>> e4650e1dff6ce783af202ab24fddb2b997c4ae17
+
     }
 
 }
