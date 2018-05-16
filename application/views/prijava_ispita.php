@@ -13,8 +13,8 @@
                 <input type="file" name="file_upload" id="file_upload">
                 <input type="submit" name="submit" value="Додај уплатницу"><br>
                 <input type="submit" name="snimi"><br>
-                <a href="<?php echo site_url("admin/predmet")?>">Предмет</a>
-                <a href="<?php echo site_url("admin/raspored")?>">Распоред</a>
+                <a href="<?php echo site_url($controller."/predmet")?>">Предмет</a>
+                <a href="<?php echo site_url($controller."/raspored")?>">Распоред</a>
                 
             </form>
         </div>

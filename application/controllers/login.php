@@ -31,14 +31,14 @@ class login extends CI_Controller {
             if ($tip==0) {
            
                 //ako je ulogovan admin
-            redirect (site_url('/admin/index_admin'));
+            redirect (site_url('/direktor/index'));
             
         }
         else {
             if ($tip==1) {
                 
                 //ako je ulogovan operater
-               redirect (site_url('/admin/index_korisnik')); 
+               redirect (site_url('/admin/index')); 
             }
         } 
             
