@@ -17,7 +17,17 @@ class model_admin extends CI_Model{
         $this->load->database();
     }
 public function unesi_ucenika(){
-    $ime=$this->input->post("ime");
+    
+    /*$this->form_validation->set_rules('ime','Унеси име',
+                'required|min_length[2]|max_length[20]');
+        //$this->form_validation->set_rules('jedinstveni_broj','Јединствени број','required');
+        if($this->form_validation->run()==FALSE){
+            $this->unesi_ucenika();// ne treba redirect jer na refresh treba da proba da opet nesto doda
+        }
+        else{
+            //ispravno*/
+    
+    /*$ime=$this->input->post("ime");
     $jedinstveni_broj=$this->input->post("jedinstveni_broj");
     $delovodni=$this->input->post("delovodni");
     $prezime=$this->input->post("prezime");
@@ -32,9 +42,11 @@ public function unesi_ucenika(){
     $adresa_stan=$this->input->post("adresa_stan");
     $broj_tel=$this->input->post("broj_tel");
     $mobilni=$this->input->post("mobilni");
-    $email=$this->input->post("email");
-     
-    $this->db->set("ime", $ime);
+    $email=$this->input->post("email");*/
+    
+    
+    
+    /*$this->db->set("ime", $ime);
     $this->db->set("jedinstveni_broj_ucenik", $jedinstveni_broj);
     $this->db->set("delovodni_broj", $delovodni);
     $this->db->set("prezime", $prezime);
@@ -53,32 +65,26 @@ public function unesi_ucenika(){
     $this->db->set("tip_ucenik_idtip_ucenik",1);
     $this->db->set("godina_obrazovanja_idgodina_obrazovanja",1);
     
-    $this->db->insert("ucenik");
+    $this->db->insert("ucenik");*/
     // $id=$this->db->insert_id();
       //return $id;
     }
+//}
+
 public function unesi_profesora(){
-    $ime=$this->input->post("ime");
-    $idprofesor=$this->input->post("idprofesor");
-    $prezime=$this->input->post("prezime");
-    $adresa=$this->input->post("adresa");
-    $broj_telefon=$this->input->post("broj_telefon");
-    $email=$this->input->post("e-mail");
-    $angazovan=$this->input->post("angazovan");
-    //titula
-    //angazovan sa strane
-     
-    $this->db->set("ime", $ime);
-    $this->db->set("idprofesor", $idprofesor);
-    $this->db->set("prezime", $prezime);
-    $this->db->set("adresa", $adresa);
-    $this->db->set("broj_telefon", $broj_telefon);
-    $this->db->set("e-mail", $email);
-    $this->db->set("angazovan_sa_strane", $angazovan);
     
+    $data=array (
+        'ime'=>$this->input->post("ime"),
+        'idprofesor'=>$this->input->post("idprofesor"),
+        'prezime'=>$this->input->post("prezime"),
+        'adresa'=>$this->input->post("adresa"),
+        'broj_telefon'=>$this->input->post("broj_telefon"),
+        'e-mail'=>$this->input->post("e-mail"),
+        'angazovan_sa_strane'=>$this->input->post("angazovan")
+);        
+
     
-    
-    $this->db->insert("profesor");    
+    $this->db->insert("profesor",$data);    
 }  
 
 public function unos_operatera() {
