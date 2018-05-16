@@ -101,10 +101,27 @@ class admin extends CI_Controller {
     }
 
     public function unesi_ucenika() {
+        $this->load->helper('form');
+        $this->load->library('form_validation');
 
-
-
-        $ime = $this->input->post("ime");
+        $this->form_validation->set_rules('ime', 'Ime_ucenika', 'required');
+        $this->form_validation->set_rules('jedinstveni_broj', 'Ime_ucenika', 'required');
+        $this->form_validation->set_rules('delovodni', 'Ime_ucenika', 'required');
+        $this->form_validation->set_rules('prezime', 'Prezime_ucenika', 'required');
+        $this->form_validation->set_rules('ime_oca', 'Ime_oca', 'required');
+        $this->form_validation->set_rules('ime_majke', 'Ime_majke', 'required');
+        $this->form_validation->set_rules('prezime_majke', 'Prezime_majke', 'required');
+        $this->form_validation->set_rules('datum', 'Datum', 'required');
+        $this->form_validation->set_rules('jmbg', 'Jmbg', 'required');
+        $this->form_validation->set_rules('mesto_rodj', 'Mesto_rodjenja', 'required');
+        $this->form_validation->set_rules('opstina_rodj', 'Opstina_rodjenja', 'required');
+        $this->form_validation->set_rules('drzava_rodj', 'Drzava_rodjenja', 'required');
+        $this->form_validation->set_rules('adresa_stan', 'Adresa_stanovanja', 'required');
+        $this->form_validation->set_rules('broj_tel', 'Broj_telefona', 'required');
+        $this->form_validation->set_rules('mobilni', 'Mobilni', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        
+        /*$ime = $this->input->post("ime");
         $jedinstveni_broj = $this->input->post("jedinstveni_broj");
         $delovodni = $this->input->post("delovodni");
         $prezime = $this->input->post("prezime");
@@ -119,11 +136,18 @@ class admin extends CI_Controller {
         $adresa_stan = $this->input->post("adresa_stan");
         $broj_tel = $this->input->post("broj_tel");
         $mobilni = $this->input->post("mobilni");
-        $email = $this->input->post("email");
-
-        $this->load->model('model_admin');
-        $this->model_admin->unesi_ucenika($ime, $jedinstveni_broj, $delovodni, $prezime, $ime_oca, $ime_majke, $prezime_majke, $datum, $jmbg, $mesto_rodj, $opstina_rodj, $drzava_rodj, $adresa_stan, $broj_tel, $mobilni, $email);
-        redirect(site_url('admin/ucenik'));
+        $email = $this->input->post("email");*/
+        
+        if($this->form_validation->run()=== FALSE){
+            $this->loadView("profesor.php");
+        }else{
+            $this->model_admin->unesi_profesora();
+            /*$data = array(
+            'poruka' => "Profesor je uspešno dodat u bazu!");
+            $this->session->set_userdata($data);*/
+            redirect(site_url('/admin/ucenik'));
+        }
+        
     }
 
     public function unesi_profesora() {
@@ -136,9 +160,9 @@ class admin extends CI_Controller {
             $this->loadView("profesor.php");
         }else{
             $this->model_admin->unesi_profesora();
-            $data = array(
+            /*$data = array(
             'poruka' => "Profesor je uspešno dodat u bazu!");
-            $this->session->set_userdata($data);
+            $this->session->set_userdata($data);*/
             redirect(site_url('/admin/profesor'));
         }
         
