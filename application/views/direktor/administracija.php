@@ -6,7 +6,7 @@
 
     <div class="col-md-6 ">
 
-        <form name="administracija" action="<?php echo site_url("admin/unos_operatera") ?>" method="POST">
+        <form name="administracija" action="<?php echo site_url($controller."/unos_operatera") ?>" method="POST">
             <fieldset>
                 <legend>Unos novih operatera:</legend>
                 Ime:<br>
@@ -46,7 +46,7 @@
                             echo $row['prezime']."&nbsp";
                             echo $row ['email']."&nbsp";
                             $ime=$row['idkorisnik'];?>
-                            <a href="<?php echo site_url("admin/obrisi_operatera/".$ime); ?>"
+                            <a href="<?php echo site_url($controller."/obrisi_operatera/".$ime); ?>"
                                onclick="return confirm('Da li ste sigurni da zelite da obrisete operatera?' );">Obriši</a><br>
                         
         

@@ -1,9 +1,9 @@
 
 
          <?php echo validation_errors(); ?>
-            <?php echo form_open('admin/unesi_ucenika');?>
+            <?php echo form_open($controller.'/unesi_ucenika');?>
 
-        <!--<form name="registracija" method="POST" action="<?php echo site_url("admin/unesi_ucenika") ?>">-->
+        <!--<form name="registracija" method="POST" action="<?php echo site_url($controller."/unesi_ucenika") ?>">-->
             <div class="row">
                 <div class="col-md-12">
                 <input type="text" name="pretraga" placeholder="Претрага">
@@ -67,8 +67,8 @@
             <div class="row">
                 
                 <div class="col-md-12">
-                    <a href="<?php echo site_url("admin/dokumentacija") ?>">Документација</a>
-                    <a href="<?php echo site_url("admin/priznati_ispiti") ?>">Признати испити</a>
+                    <a href="<?php echo site_url($controller."/dokumentacija") ?>">Документација</a>
+                    <a href="<?php echo site_url($controller."/priznati_ispiti") ?>">Признати испити</a>
                     <input type="submit" name="Sacuvaj" value="Сачувај">
                 </div>
             </div>

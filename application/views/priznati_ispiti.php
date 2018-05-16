@@ -9,7 +9,7 @@
                 <input type="text" name="svedocanstvo" placeholder="Сведочанство">
                 <input type="text" name="delovodni_broj" placeholder="Деловодни број">
                 <input type="text" name="razred" placeholder="Разред">
-                <a href="<?php echo site_url("admin/dokumentacija")?>">Документација</a>
+                <a href="<?php echo site_url($controller."/dokumentacija")?>">Документација</a>
                 <input type="submit" name="dodaj" value="Додај"><br>
                 <input type="text" name="prvi_razred" value="Први разред" disabled><br>
                 <input type="text" name="pr_ispiti" value="<?php ?>">

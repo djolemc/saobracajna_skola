@@ -8,7 +8,9 @@
     border-radius: 5px;
     margin:0 auto;
     box-shadow: 5px 5px 15px gray;
-    height: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    padding-left: 30px;
     
 }
 

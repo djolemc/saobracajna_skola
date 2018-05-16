@@ -1,6 +1,6 @@
 
             <?php echo validation_errors(); ?>
-            <?php echo form_open('admin/unesi_profesora');?>
+            <?php echo form_open($controller.'/unesi_profesora');?>
             <!--<form name="profesor" method="POST" action="<//?php echo site_url("admin/unesi_profesora") ?>">-->
 <input type="text" name="pretraga" placeholder="Претрага">
                 <input type="submit" name="unos" value="Унос">
