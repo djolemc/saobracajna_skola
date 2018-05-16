@@ -6,24 +6,37 @@
 
     <div class="col-md-6 ">
 
-        <form name="administracija" action="<?php echo site_url("admin/unos_operatera") ?>" method="POST">
-            <fieldset>
-                <legend>Unos novih operatera:</legend>
+        <form name="administracija" action="<?php echo site_url("admin/unos_operatera") ?>" method="POST" >
+            
+            <h2>Unos novih operatera</h2>
+            <div class="form-group">
                 Ime:<br>
                 <input type="text" name="ime" placeholder="Unesite ime"><br>
+            </div>   
+                
+                <div class="form-group">
                 Prezime:<br>
                 <input type="text" name="prezime" placeholder="Unesite prezime"><br>
+                </div>
+            <div class="form-group">
                 Korisnicko ime:<br>
                 <input type="text" name="kor_ime" placeholder="Kor. ime:"><br>
+            </div>
+            <div class="form-group">
                 Lozinka:<br>
                 <input type="password" name="lozinka" placeholder="Kor. ime:"><br>
+            </div>
+             <div class="form-group">   
                 Ponovite lozinku:<br>
                 <input type="password" name="lozinka2" placeholder="Lozinka:"><br>
+             </div>
+            <div class="form-group">
                 E-mail:<br>
                 <input type="email" name="email" placeholder="Lozinka:"><br><br>
                 <input type="hidden" name="tip" value="1">
+            </div>
                 <input type="submit" value="Submit"> <br>
-            </fieldset>
+           
         </form>
         <?php
         $poruka = $this->session->userdata('poruka');
