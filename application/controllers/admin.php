@@ -17,8 +17,9 @@ class admin extends CI_Controller {
     }
 
     public function index_admin() {
-        $this->loadView("index.php");
+              $this->loadView("index.php");
     }
+        
 
     public function index_korisnik() {
         $this->loadView("index.php");
@@ -77,9 +78,17 @@ class admin extends CI_Controller {
     }
 
     public function administracija() {
+         $tip = $this->session->userdata('tip');
+        if ($tip ==0) {
         $result = $this->model_admin->dohvati_operatera();
         $data['korisnici'] = $result;
         $this->loadView("admin/administracija.php", $data);
+    }   else {
+        echo 'Niste autorizovani da pristupite stranici!!!';
+ 
+        exit;
+        
+    }
     }
 
     public function priznati_ispiti() {
@@ -111,8 +120,9 @@ class admin extends CI_Controller {
         redirect(site_url('/admin/administracija'));
     }
     
-    public function obrisi_operatera() {
-        
+    public function obrisi_operatera($idkorisnik) {
+        $this->model_admin->obrisi_operatera($idkorisnik);
+        redirect(site_url('/admin/administracija'));
     }
     
 

@@ -44,8 +44,10 @@
                         foreach ($korisnici as $row) {
                             echo $row['ime']."&nbsp";
                             echo $row['prezime']."&nbsp";
-                            echo $row ['email']."&nbsp";?>
-                            <button><a href=<?php echo site_url("admin/obrisi_operatera") ?>>Obriši</a></button><br>
+                            echo $row ['email']."&nbsp";
+                            $ime=$row['idkorisnik'];?>
+                            <a href="<?php echo site_url("admin/obrisi_operatera/".$ime); ?>"
+                               onclick="return confirm('Da li ste sigurni da zelite da obrisete operatera?' );">Obriši</a><br>
                         
         
                         <?php } ?>                
