@@ -12,9 +12,18 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo site_url("admin/index_admin/")?>">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Unos podataka
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <a class="dropdown-item" href="<?php echo site_url("admin/ucenik/") ?>">Učenik</a>
+                            <a class="dropdown-item" href="<?php echo site_url("admin/profesor/") ?>">Profesor</a>
+                            <a class="dropdown-item" href="<?php echo site_url("admin/predmet/") ?>">Predmet</a>
+                        </div>
+                    </div>
 
-
-                    <li class="nav-item">
+                   <!-- <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url("admin/ucenik/")?>">Učenik</a>
                     </li>
                     <li class="nav-item">
@@ -22,7 +31,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo site_url("admin/predmet/")?>">Predmet</a>
-                    </li>
+                    </li>-->
+                   
+                   
                     <li class="nav-item">
                         <a class="nav-link disabled" href="<?php echo site_url("admin/prijava_ispita/")?>">Prijava ispita</a>
                     </li>
@@ -41,7 +52,7 @@
                     <a class="nav-link mr-sm-2"  href="<?php echo site_url("admin/do_logout/")?>">Izloguj se</a>
                 </li>
                 </ul>
-
+              
 
             </div>
         </nav>
