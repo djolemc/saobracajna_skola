@@ -85,7 +85,7 @@ class admin extends CI_Controller {
         $this->loadView("admin/administracija.php", $data);
     }   else {
         echo 'Niste autorizovani da pristupite stranici!!!';
- 
+        //dodati link ka indexu
         exit;
         
     }
